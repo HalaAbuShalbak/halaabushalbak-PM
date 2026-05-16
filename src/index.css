@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-fade-in {
+    opacity: 0;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-navy font-sans text-white antialiased;
+  }
+
+  ::selection {
+    @apply bg-cyan-accent/30 text-white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-xl border border-white/[0.08] bg-[#0d1424] p-6 shadow-[0_10px_40px_rgba(0,0,0,0.5),0_4px_16px_rgba(0,0,0,0.35)] backdrop-blur-md transition-all duration-300 sm:p-7;
+  }
+
+  .glass-card:hover {
+    @apply border-cyan-accent/30 shadow-[0_14px_48px_rgba(0,0,0,0.55),0_6px_20px_rgba(0,242,254,0.08)] -translate-y-0.5;
+  }
+
+  .glass-nav {
+    @apply border-b border-white/[0.06] bg-navy/70 backdrop-blur-xl;
+  }
+
+  .skill-card {
+    @apply flex min-h-[220px] flex-col rounded-xl border border-slate-700/60 bg-[#0d1424] p-5 shadow-[0_10px_40px_rgba(0,0,0,0.5),0_4px_16px_rgba(0,0,0,0.35)] transition-all duration-300 sm:p-6;
+  }
+
+  .skill-card:hover {
+    @apply border-slate-600/70 shadow-[0_14px_48px_rgba(0,0,0,0.55),0_6px_20px_rgba(0,242,254,0.06)] -translate-y-0.5;
+  }
+
+  .skill-card-header {
+    @apply flex items-center gap-2.5 font-mono text-sm font-medium text-white;
+  }
+
+  .skill-card-dot {
+    @apply h-2 w-2 shrink-0 rounded-full bg-cyan-accent shadow-[0_0_10px_rgba(0,242,254,0.85),0_0_18px_rgba(0,242,254,0.45)];
+  }
+
+  .skill-tag {
+    @apply inline-block rounded-md border border-cyan-accent/50 bg-transparent px-3 py-1.5 font-mono text-xs text-white transition-colors duration-200 hover:border-cyan-accent hover:shadow-[0_0_12px_rgba(0,242,254,0.15)];
+  }
+
+  .nav-link {
+    @apply font-mono text-xs tracking-wide text-gray-400 transition-colors duration-200 hover:text-cyan-accent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded border border-cyan-accent bg-cyan-accent px-5 py-2.5 font-sans text-sm font-semibold text-navy transition-all duration-200 hover:bg-cyan-accent/90 hover:shadow-[0_0_20px_rgba(0,242,254,0.35)];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded border border-white/30 bg-transparent px-5 py-2.5 font-sans text-sm font-medium text-white transition-all duration-200 hover:border-cyan-accent hover:text-cyan-accent;
+  }
+
+  .btn-nav {
+    @apply inline-flex items-center justify-center rounded border border-cyan-accent/60 bg-transparent px-3 py-1.5 font-mono text-xs text-cyan-accent transition-all duration-200 hover:bg-cyan-accent/10 hover:shadow-[0_0_12px_rgba(0,242,254,0.2)];
+  }
+
+  .hero-name-glow {
+    background: linear-gradient(135deg, #7f00ff 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+ 
+  }
+}
