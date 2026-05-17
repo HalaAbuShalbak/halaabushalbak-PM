@@ -1,5 +1,5 @@
 const LINKEDIN_URL = "https://www.linkedin.com/in/halaabushalbak/";
-const CV_FILE = "public\\Hala-Abu-Shalbak-PM.pdf";
+const CV_FILE = "/Hala-Abu-Shalbak-PM.pdf";
 
 const contactLinks = [
   {
