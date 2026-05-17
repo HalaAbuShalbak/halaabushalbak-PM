@@ -18,12 +18,11 @@ const contactLinks = [
     display: "in/halaabushalbak",
     external: true,
   },
-   {
+  {
     label: "Download CV",
     href: CV_FILE,
     display: "Download CV",
-    external: true,
-    attribute: "download"
+    isDownload: true,
   },
 ];
 
@@ -48,10 +47,18 @@ export default function Footer() {
             <li key={link.label}>
               <a
                 href={link.href}
-                {...(link.external || link.attribute
-                  ? { target: "_blank", rel: "noopener noreferrer", download: true }
-                  : {})}
                 className="group flex flex-col items-center gap-1 transition-colors duration-200"
+                // Fix: Passing undefined completely removes the attribute for non-download links
+                download={
+                  link.isDownload ? "Hala-Abu-Shalbak-PM.pdf" : undefined
+                }
+                // If it's external OR a download, open in a new tab
+                target={link.external || link.isDownload ? "_blank" : undefined}
+                rel={
+                  link.external || link.isDownload
+                    ? "noopener noreferrer"
+                    : undefined
+                }
               >
                 <span className="font-mono text-[10px] uppercase tracking-widest text-gray-300">
                   {link.label}
