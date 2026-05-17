@@ -1,4 +1,5 @@
 const LINKEDIN_URL = "https://www.linkedin.com/in/halaabushalbak/";
+const CV_FILE = "public\\Hala-Abu-Shalbak-PM.pdf";
 
 const contactLinks = [
   {
@@ -16,6 +17,13 @@ const contactLinks = [
     href: LINKEDIN_URL,
     display: "in/halaabushalbak",
     external: true,
+  },
+   {
+    label: "Download CV",
+    href: CV_FILE,
+    display: "Download CV",
+    external: true,
+    attribute: "download"
   },
 ];
 
@@ -40,8 +48,8 @@ export default function Footer() {
             <li key={link.label}>
               <a
                 href={link.href}
-                {...(link.external
-                  ? { target: "_blank", rel: "noopener noreferrer" }
+                {...(link.external || link.attribute
+                  ? { target: "_blank", rel: "noopener noreferrer", download: "" }
                   : {})}
                 className="group flex flex-col items-center gap-1 transition-colors duration-200"
               >

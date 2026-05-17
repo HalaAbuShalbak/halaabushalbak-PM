@@ -17,7 +17,7 @@ export default function Navbar() {
           href="#intro"
           className="pr-3 text-left font-sans text-xs font-semibold leading-snug tracking-tight text-gray-200 sm:pr-0 sm:text-sm"
         >
-          Fluent in Business, Developer{" "}
+          Fluent in Business, Development{" "}
           <span className="text-cyan-accent">& People.</span>
         </a>
 

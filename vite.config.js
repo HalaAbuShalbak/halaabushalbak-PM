@@ -4,5 +4,5 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   // Required for GitHub Pages project sites: https://<user>.github.io/<repo>/
-  base: "/halaabushalbak-PM/",
+  base: "/Portfolio/",
 });
