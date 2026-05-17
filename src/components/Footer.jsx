@@ -49,7 +49,7 @@ export default function Footer() {
               <a
                 href={link.href}
                 {...(link.external || link.attribute
-                  ? { target: "_blank", rel: "noopener noreferrer", download: "" }
+                  ? { target: "_blank", rel: "noopener noreferrer", download: true }
                   : {})}
                 className="group flex flex-col items-center gap-1 transition-colors duration-200"
               >
